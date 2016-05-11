@@ -6,8 +6,7 @@ rvm:
   - jruby
   - rbx-2
 
-before_deploy:
-- gem install mime-types -v 2.6.2
+
 
 before_install: 
   - gem update --system
@@ -15,3 +14,5 @@ before_install:
 
 os:
   - linux
+
+install: gem install rails  
