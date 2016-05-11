@@ -15,4 +15,3 @@ before_install:
 os:
   - linux
 
-install: gem install rails  
