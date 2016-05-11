@@ -1,4 +1,6 @@
 language: ruby
+
+sudo: false
 rvm:
   - 2.2
   - jruby
@@ -7,3 +9,6 @@ rvm:
 before_install:
   - gem update --system
   - gem --version
+
+os:
+  - linux
