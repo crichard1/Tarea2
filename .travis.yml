@@ -5,8 +5,9 @@ rvm:
   - 2.2
   - jruby
   - rbx-2
+  - ruby 2.2.1p85
 
-before_install:
+before_install: 
   - gem update --system
   - gem --version
 
