@@ -12,5 +12,5 @@ os:
   - linux
 
 script: 
-- rake test:models
+- bundle exec rake test:models
 
