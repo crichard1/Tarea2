@@ -11,3 +11,6 @@ before_install:
 os:
   - linux
 
+script: 
+"rake test:models"
+
