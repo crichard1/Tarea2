@@ -10,7 +10,7 @@ class ApiTest < ActiveSupport::TestCase
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
   
    provehash = { 'tags' => ["cat" , "nice"], 
-         		 'username' =>  "uername" ,
+         		 'username' =>  "username" ,
          		 'likes'=>2 ,
          	 	 'url' => "www.una url" ,
          		 'caption' => "text"

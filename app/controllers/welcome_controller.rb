@@ -22,7 +22,6 @@ class WelcomeController < ApplicationController
       hash = { 'metadata'=> tagsMetadata, 
                 'posts' => tagArrayHash,
                 'version' => version
-
               } 
       #puts  tagArrayHash
   	
