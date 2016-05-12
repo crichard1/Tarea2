@@ -1,0 +1,21 @@
+language: ruby
+
+
+rvm:
+  - 2.2
+
+before_install: 
+  - gem update --system
+  - gem --version
+
+os:
+  - linux
+
+script: 
+- bundle exec rake test:models
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "955ff4e9-0c18-474a-b992-a0e5945a9a08"
+  app: sheltered-sierra-14506 
