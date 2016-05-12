@@ -15,13 +15,20 @@ class WelcomeController < ApplicationController
     valid = Api.validateParam(tag)
     if valid == true
       returnLimit = 20
+      array = Array.new
       tagArrayHash = Api.tagOjects(tag , 20)
-      Api.tagMetadata(tag)
-      puts  tagArrayHash
+      tagsMetadata = Api.tagMetadata(tag)
+      version = '1.0.0'
+      hash = { 'metadata'=> tagsMetadata, 
+                'posts' => tagArrayHash,
+                'version' => version
+
+              } 
+      #puts  tagArrayHash
   	
-  	   render :text => "parametros correctos"
+  	   render :json => hash.to_json
     else
-       render :text => "parametros incorrectos"
+       render :json => {:Error => 'Parametros incorrectos'}
     end
 
 

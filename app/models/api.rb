@@ -28,7 +28,7 @@ class Api < ActiveRecord::Base
   	if whiteSpace ==true
   		return false
   	end
-  	special = "?<>',?[]}{=-)(*&^%$#`~{}."
+  	special = "?<>,?[]}{=-)(*&^%$#`~{}."
 	regex = /[#{special.gsub(/./){|char| "\\#{char}"}}]/
   	if tag =~ regex	
   		return false
