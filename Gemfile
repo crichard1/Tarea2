@@ -10,7 +10,7 @@ gem 'hashie', '~> 3.4', '>= 3.4.4'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'instagram', '~> 1.1', '>= 1.1.6'
-
+gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
