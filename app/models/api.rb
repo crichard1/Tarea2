@@ -2,6 +2,25 @@
 
 
 
+  def self.buildResponse(tag)
+    require 'json'
+    require 'rubygems'
+    require 'instagram'
+    require "hashie"
+   
+   
+      returnLimit = 20
+      array = Array.new
+      tagArrayHash = Api.tagOjects(tag , 20)
+      tagsMetadata = Api.tagMetadata(tag)
+      version = '1.0.2'
+      hash = { 'metadata'=> tagsMetadata, 
+                'posts' => tagArrayHash,
+                'version' => version
+              } 
+      return hash
+  
+  end 
   def self.tagMetadata(tag)
      response = Instagram.tag(tag).to_json
      hash = JSON.parse(response)
@@ -55,7 +74,7 @@
   	hash = JSON.parse(json)
 
   	tags =  hash["tags"] #array 
-    puts "tag: " + tags.to_s
+
   	username =  hash["user"]["username"]# string 
   	likes = hash["likes"]["count"]
     
