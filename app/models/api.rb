@@ -1,7 +1,26 @@
-class Api < ActiveRecord::Base
+  class Api < ActiveRecord::Base
 
 
 
+  def self.buildResponse(tag)
+    require 'json'
+    require 'rubygems'
+    require 'instagram'
+    require "hashie"
+   
+   
+      returnLimit = 20
+      array = Array.new
+      tagArrayHash = Api.tagOjects(tag , 20)
+      tagsMetadata = Api.tagMetadata(tag)
+      version = '1.0.3'
+      hash = { 'metadata'=> tagsMetadata, 
+                'posts' => tagArrayHash,
+                'version' => version
+              } 
+      return hash
+  
+  end 
   def self.tagMetadata(tag)
      response = Instagram.tag(tag).to_json
      hash = JSON.parse(response)
@@ -53,10 +72,18 @@ class Api < ActiveRecord::Base
   def self.getInfoFromPublication(json)
 
   	hash = JSON.parse(json)
+
   	tags =  hash["tags"] #array 
+
   	username =  hash["user"]["username"]# string 
   	likes = hash["likes"]["count"]
-  	text = hash["caption"]["text"]
+    
+    if hash["caption"].nil?
+      text="no text"
+    else
+      text = hash["caption"]["text"]
+    end
+
   	type = hash["type"]
 
   	if type == "image"

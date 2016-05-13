@@ -1,5 +1,6 @@
 require 'test_helper'
 
+
 class ApiTest < ActiveSupport::TestCase
    
    test "the truth" do
@@ -7,6 +8,7 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "createHashTagObject" do
+ 
 
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
    provehash = { 'tags' => ["cat" , "nice"], 
