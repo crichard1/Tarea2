@@ -16,10 +16,10 @@
         null,
         1,
         null,
-        5,
+        6,
         null,
-        5,
-        1,
+        6,
+        2,
         null,
         null,
         4,
@@ -189,34 +189,6 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         0
       ],
       "/home/cristobal/Escritorio/Tarea2/app/controllers/application_controller.rb": [
@@ -227,6 +199,6 @@
         0
       ]
     },
-    "timestamp": 1463158435
+    "timestamp": 1463164787
   }
 }
