@@ -1,4 +1,4 @@
-class Api < ActiveRecord::Base
+  class Api < ActiveRecord::Base
 
 
 
@@ -53,10 +53,17 @@ class Api < ActiveRecord::Base
   def self.getInfoFromPublication(json)
 
   	hash = JSON.parse(json)
+
   	tags =  hash["tags"] #array 
   	username =  hash["user"]["username"]# string 
   	likes = hash["likes"]["count"]
-  	text = hash["caption"]["text"]
+    
+    if hash["caption"].nil?
+      text="no text"
+    else
+      text = hash["caption"]["text"]
+    end
+
   	type = hash["type"]
 
   	if type == "image"
