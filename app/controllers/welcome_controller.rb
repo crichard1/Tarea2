@@ -3,7 +3,9 @@ class WelcomeController < ApplicationController
   	
 	#userId = "3231022364"
 	#accessToken=  "3231022364.5b9e1e6.da34fed1557e4986a55c7cc2803a4b03"
-	
+	def index
+    
+  end
 
   def buscarTag
   	require 'json'
@@ -18,7 +20,7 @@ class WelcomeController < ApplicationController
       array = Array.new
       tagArrayHash = Api.tagOjects(tag , 20)
       tagsMetadata = Api.tagMetadata(tag)
-      version = '1.0.1'
+      version = '1.0.2'
       hash = { 'metadata'=> tagsMetadata, 
                 'posts' => tagArrayHash,
                 'version' => version
