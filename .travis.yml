@@ -18,4 +18,6 @@ deploy:
   provider: heroku
   api_key:
     secure: "955ff4e9-0c18-474a-b992-a0e5945a9a08"
-  app: sheltered-sierra-14506 
+   app: sheltered-sierra-14506 
+   
+   
