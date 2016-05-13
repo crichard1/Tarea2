@@ -14,6 +14,9 @@ gem 'turbolinks'
 gem 'coveralls', require: false
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 
 group :production do
   gem 'pg',             '0.17.1'
@@ -21,6 +24,8 @@ group :production do
 end
 
 group :development, :test do
+	
+
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'

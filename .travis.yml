@@ -12,7 +12,7 @@ os:
   - linux
 
 script: 
-- bundle exec rake test:models
+- bundle exec rspec
 
 deploy:
   provider: heroku
