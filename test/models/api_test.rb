@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'coveralls'
+Coveralls.wear!
 
 class ApiTest < ActiveSupport::TestCase
    
@@ -7,6 +9,7 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "createHashTagObject" do
+ 
 
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
    provehash = { 'tags' => ["cat" , "nice"], 
