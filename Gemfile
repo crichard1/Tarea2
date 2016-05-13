@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'instagram', '~> 1.1', '>= 1.1.6'
 gem 'turbolinks'
+gem 'coveralls', require: false
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
