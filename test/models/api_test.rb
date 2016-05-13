@@ -8,8 +8,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "createHashTagObject" do
- 	require 'coveralls'
-	Coveralls.wear!
+ require 'coveralls'
+Coveralls.wear!('rails')
 
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
    provehash = { 'tags' => ["cat" , "nice"], 
@@ -23,8 +23,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "validate params" do
-   	require 'coveralls'
-	Coveralls.wear!
+ require 'coveralls'
+Coveralls.wear!('rails')
    	
    	assert Api.validateParam('cat')
    	assert_not Api.validateParam('ca%t')
@@ -36,8 +36,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "No missed objects of response " do
- 	require 'coveralls'
-	Coveralls.wear!
+ 	 require 'coveralls'
+Coveralls.wear!('rails')
  	returnLimit = 20
  	exampleTag='cat'
     tagArrayHash = Api.tagOjects(exampleTag , returnLimit)
@@ -46,8 +46,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "counting instagram return of elements " do
-   	require 'coveralls'
-	Coveralls.wear!
+   	 require 'coveralls'
+Coveralls.wear!('rails')
    	returnLimit = 20 
    	exampleTag='cat'
    	response = Instagram.tag_recent_media(exampleTag , {:count => returnLimit })
