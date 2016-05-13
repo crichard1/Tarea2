@@ -1,6 +1,5 @@
 require 'test_helper'
-require 'coveralls'
-Coveralls.wear!
+
 
 class ApiTest < ActiveSupport::TestCase
    
@@ -9,7 +8,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "createHashTagObject" do
- 
+ 	require 'coveralls'
+	Coveralls.wear!
 
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
    provehash = { 'tags' => ["cat" , "nice"], 
@@ -23,7 +23,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "validate params" do
-
+   	require 'coveralls'
+	Coveralls.wear!
    	
    	assert Api.validateParam('cat')
    	assert_not Api.validateParam('ca%t')
@@ -35,7 +36,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "No missed objects of response " do
- 	
+ 	require 'coveralls'
+	Coveralls.wear!
  	returnLimit = 20
  	exampleTag='cat'
     tagArrayHash = Api.tagOjects(exampleTag , returnLimit)
@@ -44,6 +46,8 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "counting instagram return of elements " do
+   	require 'coveralls'
+	Coveralls.wear!
    	returnLimit = 20 
    	exampleTag='cat'
    	response = Instagram.tag_recent_media(exampleTag , {:count => returnLimit })
