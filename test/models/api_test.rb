@@ -7,15 +7,16 @@ class ApiTest < ActiveSupport::TestCase
    end
 
    test "createHashTagObject" do
+
    createdHash = Api.createHashTagObject(['cat' , 'nice'] , "username" , 2 , "www.una url" , "text")
-  
    provehash = { 'tags' => ["cat" , "nice"], 
          		 'username' =>  "username" ,
          		 'likes'=>2 ,
          	 	 'url' => "www.una url" ,
          		 'caption' => "text"
          		 }
-   	assert provehash ==	createdHash		
+   assert provehash == createdHash		
+   
    end
 
    test "validate params" do
