@@ -13,7 +13,7 @@
       array = Array.new
       tagArrayHash = Api.tagOjects(tag , 20)
       tagsMetadata = Api.tagMetadata(tag)
-      version = '1.0.2'
+      version = '1.0.3'
       hash = { 'metadata'=> tagsMetadata, 
                 'posts' => tagArrayHash,
                 'version' => version
