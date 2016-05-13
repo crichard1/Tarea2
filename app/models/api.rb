@@ -55,6 +55,7 @@
   	hash = JSON.parse(json)
 
   	tags =  hash["tags"] #array 
+    puts "tag: " + tags.to_s
   	username =  hash["user"]["username"]# string 
   	likes = hash["likes"]["count"]
     

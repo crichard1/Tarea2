@@ -9,6 +9,7 @@ class ApisController < ApplicationController
     require "hashie"
     
     tag = params["tag"]
+    puts "tag: " + tag
     valid = Api.validateParam(tag)
     if valid == true
       returnLimit = 20
