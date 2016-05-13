@@ -1,10 +1,6 @@
 class ApisController < ApplicationController
  skip_before_filter  :verify_authenticity_token
-
-
  def buscarTag
-   
-    
     tag = params["tag"]
     valid = Api.validateParam(tag)
     if valid == true
@@ -13,8 +9,5 @@ class ApisController < ApplicationController
     else
        render :json => {:Error => 'Parametros incorrectos'} , status: 400
     end
-
-  end  
-
-  
+  end    
 end
