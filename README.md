@@ -2,7 +2,8 @@
 
 
 Tarea de Integracíón continua
-Version 1.0.3
+
+Version 1.0.5
 
 [![Build Status](https://travis-ci.org/crichard1/Tarea2.svg?branch=master)](https://travis-ci.org/crichard1/Tarea2)
 
